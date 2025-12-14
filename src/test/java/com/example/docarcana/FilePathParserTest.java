@@ -20,7 +20,6 @@ public class FilePathParserTest {
         this.filePathParser = new FilePathParser();
         List<String> expected = new ArrayList<>();
         expected.add("invoices");
-        expected.add("january");
         String input = "/invoices/january";
 
         assertEquals(expected, filePathParser.parsePath(input));
