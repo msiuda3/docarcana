@@ -11,9 +11,10 @@ import java.util.UUID;
 public interface DocumentMetadataStorage {
     List<DocumentMetaData> getAllDocuments();
     Optional<Folder> getRootFolder();
-    Optional<Folder> getFolderByName();
+    Optional<Folder> getFolderByName(String name);
 
     List<Folder> getChildrenFolders(Folder folder);
+    List<DocumentMetaData> getAllDocumentsForFolder(Folder folder);
     Optional<DocumentMetaData> getDocumentById(UUID uuid);
     DocumentMetaData saveDocument(DocumentMetaData documentMetaData);
 
